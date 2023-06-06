@@ -164,14 +164,11 @@
         displayBudget();
     });
 
-    // Budget button click event listener
-    budgetBtn.addEventListener("click", () => {
-        if (budgetInpElem.value.trim() > 99) {
-            budgetFormContainerElem.style.display = "none";
-            expenseFormContainerElem.style.display = "block";
-            localStorage.setItem("userBudget", budgetInpElem.value);
-        } else {
-            alert("Please enter budget above than 99.");
-        }
+    // budget form submit listener
+    document.querySelector(".budget-form-container").addEventListener("submit", (e) => {
+        e.preventDefault();
+        budgetFormContainerElem.style.display = "none";
+        expenseFormContainerElem.style.display = "block";
+        localStorage.setItem("userBudget", budgetInpElem.value);
     });
 })();
