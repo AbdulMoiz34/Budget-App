@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Budget App</h1>
+    </header>
+
+    <section class="budget-form-container">
+        <form>
+            <label for="budget-input" class="budget-input-title">Budget:</label>
+            <input type="number" name="userBuget" class="budget-input" placeholder="Enter monthly budget.">
+            <button type="button" class="budget-button">Set Budget</button>
+        </form>
+    </section>
+
+    <section class="expense-form-container">
+        <form class="expense-form">
+            <label for="date-inp">Due Date<b class="asterisk-icon">&#42;</b></label>
+            <input type="date" name="date" class="date-inp" required>
+
+            <label for="amount-inp">Amount<b class="asterisk-icon">&#42;</b></label>
+            <input type="number" name="Amount" class="amount-inp" placeholder="Enter amount" required>
+
+            <label for="Category-inp">Category<b class="asterisk-icon">&#42;</b></label>
+            <input type="text" name="Category" class="category-inp" placeholder="e.g. Food, Transportation, Shopping"" required>
+
+            <label for="">Description<b class=" asterisk-icon">&#42;</b></label>
+            <input type="text" name="Description" class="details-inp" placeholder="Details (optional)">
+
+            <label for="payment-date-inp">Payment Date<b class="asterisk-icon">&#42;</b></label>
+            <input type="date" name="PaymentDate" class="payment-date-inp" placeholder="Payment date (optional)">
+
+            <input type="submit" class="expense-btn" value="Add Expense">
+            <!-- <button type="submit">Add Expense</button> -->
+        </form>
+    </section>
+
+    <section class="expense-lists-container">
+        <h2 class="heading">&#9650;Your Expense List:&#9660;</h2>
+        <div class="list-container">
+            <div class="expenseList-head">
+                <h3 class="due-date">Due Date:</h3>
+                <button class="add-expense-btn">Add Expense</button>
+            </div>
+            <ul class="ul">
+                <!-- Add dynamically with the help of JS -->
+
+                <!-- <li>
+                    <div class="container">
+                        <div class="box1">
+                            <h3 class="expense-title">Restaurent & Cafe</h3>
+                            <p class="expense-date">20 aug 2012</p>
+                        </div>
+
+                        <div class="box2">
+                            <p class="amount">10000</p>
+                            <span class="editBtn">&#x1F58C</span>
+                            <span class="delBtn">&#x274C</span>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+            <div class="budget-result">
+                <!-- <p class="user-budget">Total budget:12000rs</p>
+                <p class="remain">Remain: 1000</p>
+                <p class="user-expenses">expense: 12000</p> -->
+                <p>Budget:<input type="number" class="user-budget"></p>
+                <p class="remain"></p>
+                <p class="user-expenses"></p>
+            </div>
+        </div>
+    </section>
+    <span class="my-alert"></span>
+</body>
+
+</html>
