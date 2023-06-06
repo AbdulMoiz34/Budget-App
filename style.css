@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #cbc7c7;
+}
+
+/*               HEADER  START               */
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #929292;
+}
+
+header h1 {
+    padding: 5px 7px;
+    margin: 0;
+    color: #fff;
+}
+
+/*  ------------------------------------------------------- */
+
+/*              set Budget-Container  START               */
+section.budget-form-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+}
+
+.budget-form-container form {
+    background-color: #dcdbdb;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #807f7f;
+}
+
+.budget-input-title {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: rgb(95, 92, 92);
+}
+
+.budget-input {
+    appearance: none;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    color: rgb(102, 99, 99);
+    text-align: center;
+}
+
+.budget-input:focus {
+    outline: 2px solid rgb(181, 181, 181);
+}
+
+.budget-input:focus::placeholder {
+    opacity: 0;
+}
+
+::placeholder {
+    color: rgb(138, 138, 138);
+}
+
+.budget-button {
+    border-radius: 4px;
+    border: none;
+    padding: 6px 11px;
+    display: block;
+    margin: 15px auto;
+    margin-bottom: 0;
+    text-align: center;
+    background-color: rgb(0, 0, 200);
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.budget-button:hover {
+    border-radius: 6px;
+    background-color: rgb(0, 0, 255);
+}
+
+/*  ------------------------------------------------------- */
+
+/*               Expense--Form-Container  START               */
+
+.expense-form-container {
+    background-color: #edeaea;
+    color: #4e4e4e;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 280px;
+    box-shadow: 0 0 4px rgb(72, 70, 70);
+    display: none;
+}
+
+.expense-form-container form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.expense-form-container label {
+    display: block;
+    padding: 3px 2px 5px 0;
+
+}
+
+.expense-form-container input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-bottom: 4px;
+}
+
+.expense-form-container input:hover {
+    outline: 1px dashed rgb(56, 56, 56);
+}
+
+.expense-form-container input:focus {
+    outline: 2px solid rgb(162, 159, 159);
+}
+
+.expense-btn {
+    margin: .9rem 0;
+    border: none;
+    background-color: rgb(135, 2, 135);
+    color: #fff;
+    font-weight: bolder;
+    padding: 5px 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.expense-btn[type=submit]:hover {
+    background-color: rgb(95, 0, 95);
+    outline: none;
+}
+
+.asterisk-icon {
+    color: rgb(255, 174, 0);
+    font-size: 16px;
+}
+
+/*  ------------------------------------------------------- */
+
+/*               expense--lists-container  START               */
+.expense-lists-container .heading {
+    text-align: center;
+}
+
+.expense-lists-container {
+    display: none;
+
+}
+
+.list-container {
+    background-color: #e0e0e0;
+    margin: 0 10px;
+    width: 50vw;
+    padding: 10px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    padding-bottom: 1px;
+    margin-bottom: 35px;
+}
+
+.expenseList-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.due-date {
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.expenseList-head button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color: rgb(17, 174, 3);
+    background-color: #ffffff;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.expenseList-head button:hover {
+    color: #fff;
+    background-color: rgb(17, 174, 3);
+}
+
+.due-date i {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #605f5f;
+    font-style: normal;
+}
+
+ul {
+    padding: 0;
+}
+
+.list-container li {
+    list-style: none;
+    margin-bottom: 10px;
+    border-radius: 16px;
+
+}
+
+li .container {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 20px #bcbcbc;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 6px;
+
+}
+
+.expense-title {
+    margin: 0;
+    color: #4c4c4c;
+}
+
+.expense-date {
+    margin: 0;
+    color: #414141;
+    font-size: 14px;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.delBtn,
+.editBtn {
+    display: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.delBtn:hover,
+.editBtn:hover {
+    background-color: #cbcbcb;
+}
+
+.list-container li:hover .delBtn,
+.list-container li:hover .editBtn {
+    display: inline-block;
+}
+
+.amount {
+    margin-right: 20px;
+}
+
+.budget-result {
+    display: flex;
+    justify-content: space-between;
+}
+
+.budget-result p,
+.budget-result p,
+.budget-result p {
+    margin: 0;
+    color: #696969;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.my-alert {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 3px 6px;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: none;
+}
+
+.budget-result input {
+    background-color: #e0e0e0;
+    border: none;
+    margin: 0 0 0 4px;
+    width: 43px;
+    color: green;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*  To remove the arrow that appears when hovering over a numeric input field   ~chatgpt   */
+.budget-result input::-webkit-outer-spin-button,
+.budget-result input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*        ----------------------          */
+.budget-result input:focus {
+    outline: 1px solid gray;
+}
+
+@media screen and (max-width:610px) {
+    .expense-form-container {
+        width: 200px;
+    }
+
+    .list-container {
+        width: 70vw;
+    }
+
+    .expenseList-head {
+        flex-direction: column;
+    }
+
+    .budget-result {
+        gap: 20px;
+        text-align: center;
+    }
+
+    .my-alert {
+        opacity: 0;
+        display: none;
+    }
+
+    .delBtn,
+    .editBtn {
+        display: inline-block;
+    }
+}
